@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name=”description” content="Hi, I'm Mayur Agarwal. I'm a Full Stack Developer and
+    I love to Code and Make cool stuff.
+    This is my Portfolio or Website about some of the things I've done."/>
+  <title>Mayur Agarwal</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link href="css/font-awesome.min.css" rel="stylesheet"/>
+  
+	<!-- Scripts-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.6.5/angular-resource.min.js"></script>
+	<script src="init.js"></script>
+	<script src="app.js"></script>
+    <script src="controllers/techSkills.js"></script>
+    <script src="controllers/sendEmail.js"></script>
+    <script src="controllers/coursework.js"></script>
+	
+    <script src="services/techskillsService.js"></script>
+    <script src="services/courseworkServices.js"></script>
+    
+</head>
+<body ng-app="myProfile">
+  
+  <!--<nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  -->
+  
+  <!-------------------------------Side-Nav-Bar Start------------------------------->
+<ul id="slide-out" class="side-nav">
+    <li>
+        <div class="userView">
+            <div class="background">
+                <img src="resources/images/lamps-night.jpg" style="width: 100%" alt="image of lamps at night">
+            </div>
+            <a href="#index-banner"><img class="circle" src="resources/images/mayur.JPG" alt="image of mayur"></a>
+            <a id="logo-container" href="#index-banner"><img src="resources/images/logo.png" alt="mayur-logo" width="200" height="70" border="0"></a>
+        </div>
+    </li>
+    <li><a class="waves-effect" href="#intro"><i class="material-icons">face</i>About me!</a></li>
+    <li><a class="waves-effect" href="#technical-skills"><i class="fa fa-laptop fa-2x" aria-hidden="true"></i>Technical Skills</a></li>
+    <li><a class="waves-effect" href="#work-exp"><i class="fa fa-briefcase fa-2x" aria-hidden="true"></i>Work Experience</a></li>
+    <li><a class="waves-effect" href="#projects"><i class="fa fa-code fa-2x" aria-hidden="true"></i>Projects</a></li>
+    <li><a class="waves-effect" href="#coursework"><i class="fa fa-book fa-2x" aria-hidden="true"></i>Coursework</a></li>
+    <li><a class="waves-effect" href="#message-me"><i class="material-icons">chat</i>Message me!</a></li>
+    <li><a class="waves-effect" href="#social-links"><i class="material-icons">people</i>Social Network</a></li>
+    <li>
+        <a class="waves-effect" href="resources/anubhav-onlineresume.pdf" target="_blank">
+            <i class="fa fa-download fa-2x" aria-hidden="true"></i>My Resume!!
+        </a>
+    </li>
+</ul>
+
+<span style="position: fixed; z-index: 3; margin-top: 10px; margin-left: 10px" class="black">
+<a href="#" data-activates="slide-out" class="btn-floating button-collapse waves-effect waves-light white-text transparent"><i class="material-icons">menu</i></a>
+</span>
+  
+  
+  <!-------------------------------Main Banner Start------------------------------->
+<div id="index-banner" class="parallax-container scrollspy valign-wrapper" ng-style="{height: windowHeight}">
+    <div class="section no-pad-bot">
+        <div class="container center animated fadeInDown">
+            <img class="avatar1 z-depth-5" src="resources/images/mayur.JPG" alt="image of mayur" style="border-radius: 100%; width: 30%;">
+            <div class="row center">
+                <h4 class="header col s12 light">Hi! I'm <strong style="opacity: 0.7">Mayur Agarwal</strong>.</h4>
+                    
+                <h5 class="header col s12 light">I &hearts; to Code &amp; Make cool stuff.</h5>
+            </div>
+            <div class="row center scrollspy" id="social-links">
+                <a target="_blank" class="btn btn-large tooltipped black-text white" style="opacity:0.6;" data-position="bottom" data-delay="30" data-tooltip="Linked-In" href="https://www.linkedin.com/in/mayuragarwal25/"><i class="fa fa-linkedin-square fa-5x"></i></a>
+				<a target="_blank" class="btn btn-large tooltipped black-text white" style="opacity:0.6;" data-position="bottom" data-delay="30" data-tooltip="Twitter" href="https://twitter.com/MAYURAGARWAL05"><i class="fa fa-twitter fa-5x"></i></a>
+                <a target="_blank" class="btn btn-large tooltipped black-text white" style="opacity:0.6;" data-position="bottom" data-delay="30" data-tooltip="Facebook" href="https://www.facebook.com/mayuragarwal05"><i class="fa fa-facebook fa-5x"></i></a>
+                <a target="_blank" class="btn btn-large tooltipped black-text white" style="opacity:0.6;" data-position="bottom" data-delay="30" data-tooltip="Github" href="https://github.com/MayurAgarwal25"><i class="fa fa-github fa-5x"></i></a>
+                <a target="_blank" class="btn btn-large tooltipped black-text white" style="opacity:0.6;" data-position="bottom" data-delay="30" data-tooltip="Angel-List" href="https://angel.co/"><i class="fa fa-angellist fa-5x"></i></a>
+                
+                <a class="btn btn-large tooltipped black-text white" style="opacity:0.6;" data-position="bottom" data-delay="30" data-tooltip="Email" href="mailto:mayuragarwal25@gmail.com"><i class="fa fa-envelope fa-5x"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="parallax" style="background-image: url('resources/images/overlay.png')">
+        <img src="resources/images/mac-desk.jpg" style="opacity: 0.7" height="150%" alt="background img mac desktop">
+    </div>
+</div>
+
+  <!-------------------------------intro section------------------------------->
+<div class="container scrollspy" id="intro">
+    <div class="section center">
+        <div>
+            <i class="material-icons large">face</i>
+        </div>
+        <div style="font-size: 25px">
+            I'm a 4<sup>th</sup> year student pursuing
+            <br>
+            B.Tech. in Computer Science from
+            <br>
+            <a href="http://www.amity.edu/" target="_blank">Amity University</a>, Noida.
+        </div>
+        <div>
+            <i class="fa fa-home fa-5x" aria-hidden="true"></i>
+        </div>
+        <div style="font-size: 25px">
+            Born and brought up in the very beautiful
+            <br>
+            Pink City, <a href="https://en.wikipedia.org/wiki/Jaipur">Jaipur</a>
+        </div>
+    </div>
+</div>
+
+	<!-------------------------------Technical Skills Section Start------------------------------->
+<div class="parallax-container valign-wrapper scrollspy" id="technical-skills">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h1 class="header col s12">Technical Skills</h1>
+            </div>
+        </div>
+    </div>
+    <div class="parallax black" style="background-image: url('resources/images/overlay.png')" >
+        <img src="resources/images/code-screen.jpg" width="100%" alt="parallax code screen" style="opacity:0.8;">
+    </div>
+</div>
+
+<div class="container" ng-controller="techSkills as tech">
+    <div class="section">
+        <h5 class="center">Frameworks &amp; Tools:</h5>
+        <div class="row">
+            <div class="col s6 m3 center" ng-repeat="f in tech.frameworks">
+                <div class="card small">
+                    <div class="card-image waves-effect waves-block waves-light activator" style="height: 150px;
+                               background-repeat: no-repeat;
+                               background-size: contain;
+                               background-position: center center;"
+                               ng-style="{'background-image':'url('+f.image+')'}">
+                    </div>
+                    <div class="card-action center">
+                        <span class="card-title activator grey-text text-darken-4">{{f.name}}</span>
+                        <p><a class="activator" href="">Know more...</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{f.name}}<i class="material-icons right">close</i></span>
+                        <p>{{f.info}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <b style="font-size: 20px">Others:</b>
+        <div class="row">
+            <div class="chip" ng-repeat="of in tech.otherFrameworks">
+                <a href="{{of.link}}" target="_blank" style="font-size: 20px">{{of.name}}</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h5 class="center">Programming Languages:</h5>
+        <strong style="font-size: 20px">Advanced:</strong>
+        <div class="row">
+            <div class="chip" ng-repeat="lang in tech.languages | filter: {category: 'expert'}">
+                <a href="{{lang.link}}" target="_blank" style="font-size: 20px">{{lang.name}}</a>
+            </div>
+        </div>
+
+        <strong style="font-size: 20px">Intermediate:</strong>
+        <div class="row">
+            <div class="chip" ng-repeat="lang in tech.languages | filter: {category: 'intermediate'}">
+                <a href="{{lang.link}}" target="_blank" style="font-size: 20px">{{lang.name}}</a>
+            </div>
+        </div>
+
+        <strong style="font-size: 20px">Beginner:</strong>
+        <div class="row">
+            <div class="chip" ng-repeat="lang in tech.languages | filter: {category: 'novice'}">
+                <a href="{{lang.link}}" target="_blank" style="font-size: 20px">{{lang.name}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------------------------------Work Exp Section Start------------------------------->
+<div class="parallax-container valign-wrapper scrollspy" id="work-exp">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h1 class="header col s12">Work Experience</h1>
+            </div>
+        </div>
+    </div>
+    <div class="parallax black" style="background-image: url('resources/images/overlay.png')">
+        <img src="resources/images/macbook-coffee.jpg" width="100%" style="opacity: 0.6" alt="image of macbook on desk with hiking items">
+    </div>
+</div>
+
+<div class="container">
+    <div class="section">
+        <div class="center">
+            <i class="fa fa-briefcase fa-5x" aria-hidden="true"></i>
+        </div>
+        <div class="row">
+           <div class="col">
+               <a href="https://www.ultratechcement.com/" target="_blank">
+                   <img class="z-depth-3" src="resources/images/abg.png" alt="company logo" style="border-radius: 20%;" width="150" height="110">
+               </a>
+           </div>
+            <div class="col">
+                <div class="row"><b style="font-size: 25px">Abitya Birla Group, Mumbai</b></div>
+                <div class="row"><b style="font-size: large">Summer Intern </b></div>
+                <div class="row">May 2017 - June 2017</div>
+            </div>
+        </div>
+        <div class="row">
+            <ul class="collection left" style="font-size: medium">
+                <li class="collection-item">
+                    <i class="material-icons">star</i>
+                    Worked on Direct Challan Automation mobile application, in Kony Platform.
+                </li>
+                <li class="collection-item">
+                    <i class="material-icons">star</i>
+					Application integrates with persistent database and with SAP through SAP-PI.
+                </li>
+            </ul>
+        </div>
+		
+		
+		<br>
+		
+        <div class="row">
+           <div class="col">
+               <a href="https://amitysoftwaretestingclub.github.io/" target="_blank">
+                   <img class="z-depth-3" src="resources/images/astc.png" alt="astc logo" style="border-radius: 20%;" width="150" height="110">
+               </a>
+           </div>
+            <div class="col">
+                <div class="row"><b style="font-size: 25px">Amity Software Testing Club</b></div>
+                <div class="row"><b style="font-size: large">President </b></div>
+                <div class="row">July 2016 - Present</div>
+            </div>
+        </div>
+		
+		
+        <div class="row">
+           <div class="col">
+               <a href="https://amitysoftwareengineeringclub.github.io/" target="_blank">
+                   <img class="z-depth-3" src="resources/images/asec1.png" alt="asec logo" style="border-radius: 20%;" width="150" height="110">
+               </a>
+           </div>
+            <div class="col">
+                <div class="row"><b style="font-size: 25px">Amity Software Engineering Club</b></div>
+                <div class="row"><b style="font-size: large">President </b></div>
+                <div class="row">July 2017 - Present</div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<!-----------------------------Coursework Section Start----------------------------->
+<div class="parallax-container valign-wrapper scrollspy" id="coursework">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h1 class="header col s12 light">Coursework</h1>
+            </div>
+        </div>
+    </div>
+    <div class="parallax">
+        <img src="resources/images/books.jpg" width="80%" alt="image of macbook on desk with hiking items">
+    </div>
+</div>
+
+<div class="container" ng-controller="coursework as course">
+    <div class="section">
+        <div class="center">
+            <i class="fa fa-book fa-5x" aria-hidden="true"></i>
+        </div>
+        
+        <h5 class="center">College:</h5>
+        <ul class="collection center">
+            <li class="collection-item" ng-repeat="c in course.college"><b>{{c.name}}</b></li>
+        </ul>
+    </div>
+    
+</div>
+
+<!-----------------------------Message Me section----------------------------->
+<div class="parallax-container scrollspy valign-wrapper" id="message-me">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h1 class="header col s12">Message Me</h1>
+            </div>
+        </div>
+    </div>
+    <div class="parallax black" style="background-image: url('resources/images/overlay.png')">
+        <img src="resources/images/pen-writing.jpg" width="80%" alt="image of macbook on desk with hiking items" style="opacity:0.8;">
+    </div>
+</div>
+
+<div class="container" ng-controller="sendEmail as sendEmail" >
+    <div class="center">
+        <i class="material-icons large">chat</i>
+    </div>
+    <div class="row">
+        <form class="col s12" name="emailForm">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="name" type="text" class="validate" ng-model="sendEmail.sender" name="sender" required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="sendEmail" type="email" class="validate" ng-model="sendEmail.from" name="senderEmail" required>
+                    <label for="sendEmail" data-error="wrong">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">mode_edit</i>
+                    <textarea id="icon_prefix2" class="materialize-textarea" ng-model="sendEmail.message" name="message"></textarea>
+                    <label for="icon_prefix2">Your Message</label>
+                </div>
+            </div>
+
+            <div class="center">
+                <button class="btn waves-effect red darken-4 waves-light z-depth-3"
+                        ng-disabled="!(emailForm.message.$valid && emailForm.sender.$valid && emailForm.senderEmail.$valid) || sendEmail.disable"
+                        ng-click="sendEmail.submit()">Send
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-----------------------------Resume section----------------------------->
+<div id="my-resume" class="parallax-container scrollspy valign-wrapper" style="height: 300px">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h3 class="header col s12 white-text">And here's my resume...</h3>
+                <a target="_blank" class="btn btn-large white black-text z-depth-5" href="resources/Mayur_Agarwal.pdf">
+                    <i class="fa fa-download fa-8x" aria-hidden="true"></i>&nbsp;Resume
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="parallax black" style="background-image: url('resources/images/overlay.png')">
+        <img src="resources/images/quote-einstein.jpg" width="80%" alt="image of macbook on desk with hiking items" style="opacity:0.8;">
+    </div>
+</div>
+
+<!-------------------------------Bottom right fab button------------------------------->
+<div class="fixed-action-btn animated bounce" id="FabButton">
+    <a class="btn-floating btn-large red">
+        <i class="large material-icons">sentiment_very_satisfied</i>
+    </a>
+    <ul>
+        <li><a href="#index-banner" data-position="left" data-delay="50" data-tooltip="Go to Top" class="btn btn-floating orange tooltipped"><i class="material-icons">keyboard_arrow_up</i></a></li>
+        <li><a href="#social-links" data-position="left" data-delay="50" data-tooltip="My Social Network!" class="btn btn-floating red tooltipped"><i class="material-icons">person_add</i></a></li>
+        <li><a href="resources/Mayur_Agarwal.pdf" target="_blank" data-position="left" data-delay="50" data-tooltip="Download My Resume!" class="btn tooltipped btn-floating green"><i class="material-icons">file_download</i></a></li>
+        <li><a href="#message-me" data-position="left" data-delay="50" data-tooltip="Message Me!" class="btn tooltipped btn-floating blue"><i class="material-icons">comment</i></a></li>
+    </ul>
+</div>
+
+<!-----------------------------Footer section----------------------------->
+<footer class="page-footer light-blue darken-4">
+    <div class="footer-copyright">
+        <div class="container center">
+          Copyright <i class="fa fa-copyright"></i> Mayur Agarwal 2017
+        </div>
+    </div>
+</footer>
+
+
+
+
+  <!--  Scripts-->
+  <script src="controllers/techSkills.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
