@@ -327,14 +327,14 @@
         <i class="material-icons large">chat</i>
     </div>
     <div class="row">
-        <form class="col s12" name="emailForm">
+        <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxGCDbjsDZozjGrhr4vPdZxOcEMrDQDPAu7WHXBFApTiltXpNdy/exec" class="col s12" name="emailForm">
             <div class="row">
                 <div class="input-field col s6">
-                    <input id="name" type="text" class="validate" ng-model="sendEmail.sender" name="sender" required>
+                    <input id="name" type="text" class="validate" ng-model="sendEmail.sender" name="name" required>
                     <label for="name">Name</label>
                 </div>
                 <div class="input-field col s6">
-                    <input id="sendEmail" type="email" class="validate" ng-model="sendEmail.from" name="senderEmail" required>
+                    <input id="sendEmail" type="email" class="validate" ng-model="sendEmail.from" name="email" required>
                     <label for="sendEmail" data-error="wrong">Email</label>
                 </div>
             </div>
@@ -354,8 +354,15 @@
                 </button>
             </div>
         </form>
+		<div style="display:none;" id="thankyou_message">
+          <h3><em>Thanks</em> for contacting me!</h3>
+        </div>
     </div>
 </div>
+
+<!--FOR Thanks Message-->
+<script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 
 <!-----------------------------Resume section----------------------------->
 <div id="my-resume" class="parallax-container scrollspy valign-wrapper" style="height: 300px">
