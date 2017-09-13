@@ -15,10 +15,13 @@ app.controller('coursework', ['courseworkCollegeServices', function (courseworkC
 app.factory('courseworkCollegeServices', function () {
     return [
         {name: "Advance Data Structures & Algorithms"},
-        {name: "Operating Systems"},
+        {name: "Information Storage Management"},
+	{name: "Software Testing"},
+	{name: "Software Engineering"},
+	{name: "Database Management System"},
+	{name: "Object Oriented Programming"},
+	{name: "Operating Systems"},
         {name: "Linux & Shell Programming"},
-        {name: "Database Management System"},
-        {name: "Software Engineering"},
-        {name: "Object Oriented Programming"}
+        
     ]
 });
